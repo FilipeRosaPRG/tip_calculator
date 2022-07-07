@@ -1,4 +1,4 @@
-# Tip calculator
+# Tip calculator with Kotlin
 Create a tip calculator app by starting with the layout and then implementing the logic to calculate the tip based on user input.
 
 # Illustration
