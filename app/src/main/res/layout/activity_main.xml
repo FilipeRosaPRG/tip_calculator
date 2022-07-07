@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:padding="16dp"
     tools:context=".MainActivity">
 
@@ -19,9 +23,9 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cost_of_service"
-        android:layout_marginStart="32dp"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:hint="@string/cost_of_service"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -38,10 +42,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:importantForAccessibility="no"
-        app:srcCompat="@drawable/ic_service"
+        app:layout_constraintBottom_toBottomOf="@id/service_question"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/service_question"
-        app:layout_constraintBottom_toBottomOf="@id/service_question" />
+        app:srcCompat="@drawable/ic_service" />
 
     <TextView
         android:id="@+id/service_question"
@@ -83,15 +87,16 @@
 
 
     </RadioGroup>
+
     <ImageView
         android:id="@+id/icon_round_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:importantForAccessibility="no"
-        app:srcCompat="@drawable/ic_round_up"
+        app:layout_constraintBottom_toBottomOf="@id/round_up_switch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/round_up_switch"
-        app:layout_constraintBottom_toBottomOf="@id/round_up_switch" />
+        app:srcCompat="@drawable/ic_round_up" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/round_up_switch"
@@ -131,3 +136,5 @@
         app:layout_constraintTop_toBottomOf="@id/calculate_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
